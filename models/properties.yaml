@@ -1,0 +1,22 @@
+
+sources:
+  - name: "sahil's sources"
+    database: DB_ECOMM
+    schema: SC_ECOMM
+    tables:
+      -name: USERS
+
+
+models:
+  - name: "sahil2"
+    config:
+      materialized: "table"
+  - name: "users"
+    config:
+      materialized: "view"
+  - name: "users_v2"
+    config:
+      materialized: 'table'
+  - name: "users_v3"
+    config:
+      materialized: 'view'
