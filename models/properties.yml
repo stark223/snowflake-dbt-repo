@@ -2,9 +2,10 @@
 sources:
   - name: "sahil's sources"
     database: DB_ECOMM
-    schema: DB_ECOMM.DBT_TRANSFORMED_DATA_SCH
+    schema: SC_ECOMM
     tables:
-      -name: SAHIL2
+      - name: USERS
+      - name: person_sales
 
 
 models:
@@ -17,3 +18,7 @@ models:
   - name: "users_v3"
     config:
       materialized: 'view'
+  - name: "test_jinja.sql"
+    config:
+      materialized: "table"
+      
