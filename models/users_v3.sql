@@ -1,7 +1,7 @@
 {{config(materialized='view')}}
 
-select * from DB_ECOMM.SC_ECOMM.USERS
+select * from {{source("sahil's sources",'USERS')}}
 UNION ALL
-select * from DB_ECOMM.SC_ECOMM.USERS
+select * from {{source("sahil's sources",'USERS')}}
 UNION ALL
-select * from DB_ECOMM.SC_ECOMM.USERS
+select * from {{source("sahil's sources",'USERS')}}

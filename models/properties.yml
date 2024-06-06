@@ -4,19 +4,21 @@ sources:
     database: DB_ECOMM
     schema: SC_ECOMM
     tables:
-      -name: USERS
+      - name: USERS
+      - name: person_sales
 
 
 models:
   - name: "sahil2"
     config:
       materialized: "table"
-  - name: "users"
-    config:
-      materialized: "view"
   - name: "users_v2"
     config:
       materialized: 'table'
   - name: "users_v3"
     config:
       materialized: 'view'
+  - name: "test_jinja.sql"
+    config:
+      materialized: "table"
+      
