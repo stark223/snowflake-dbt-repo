@@ -5,7 +5,10 @@ sources:
     schema: SC_ECOMM
     tables:
       - name: USERS
+      - name: SCD_EG
       - name: person_sales
+      - name: PAYMENT_MODES
+      - name: DIM_SALES
 
 
 models:

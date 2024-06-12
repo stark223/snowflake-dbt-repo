@@ -1,6 +1,8 @@
  {{
     config(
-        materialized='view'
+        materialized='view',
+        alias="new_table_name",
+        tags=['daily']
    )
  }}
 -- select * from {{source("sahil's sources",'USERS')}}
