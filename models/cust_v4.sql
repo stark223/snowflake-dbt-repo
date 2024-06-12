@@ -1,6 +1,7 @@
  {{
     config(
-        materialized='view'
+        materialized='view',
+        alias="new_table_name"
    )
  }}
 -- select * from {{source("sahil's sources",'USERS')}}
