@@ -4,12 +4,17 @@ sources:
     database: DB_ECOMM
     schema: SC_ECOMM
     tables:
+      - name: finance
+      - name: marketing
+      - name: pii
       - name: USERS
       - name: SCD_EG
       - name: person_sales
       - name: PAYMENT_MODES
       - name: DIM_SALES
+      - name: DIM_CURRENCY
 
+ 
 
 models:
   - name: "sahil2"
@@ -24,4 +29,38 @@ models:
   - name: "test_jinja.sql"
     config:
       materialized: "table"
+  - name: "pii_new"
+    columns:
+       - name: "ID"    
+         tests:
+         - unique
+         - not_null     
+         - relationships:
+               field: ID
+               to: ref('pii_2') 
+         
+       - name: "Gender"
+         tests:
+           - accepted_values:
+               values: ['male','female']
+      #  - name: ID
+      #    tests:        
+      #      - relationships:
+      #          field: ID
+      #          to: ref('pii_2') 
+  - name: marketing_stg
+    columns:
+       - name: sales
+         tests:
+            - new_test
+  - name: finance
+    columns:
+      - name: cost
+        tests:
+          - new_test
+        
+
+     
+         
+      
       
